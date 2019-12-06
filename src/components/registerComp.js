@@ -72,7 +72,7 @@ class RegistrationForm extends React.Component {
       <Form onSubmit={this.handleSubmit} className="register-form">
         <Form.Item label="用户名"> 
           {getFieldDecorator('username', {
-            rules: [{ required: true, message: '请输入用户名，限制25个字符，只能包含数字中英文', pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/}],
+            rules: [{ required: true, message: '请输入用户名，限25个字符，限数字中英文', pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/}],
           })(
             <Input/>,
           )}
@@ -82,8 +82,8 @@ class RegistrationForm extends React.Component {
             rules: [
               {
                 required: true,
-                message: '请输入密码，限制25个字符，只能包含数字中英文',
-                pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/
+                message: '请输入密码，限25个字符',
+                pattern: /^.{1,25}$/
               },
               {
                 validator: this.validateToNextPassword,
@@ -96,8 +96,8 @@ class RegistrationForm extends React.Component {
             rules: [
               {
                 required: true,
-                message: '请再次输入您的密码',
-                pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/
+                message: '请再次输入密码',
+                pattern: /^.{1,25}$/
               },
               {
                 validator: this.compareToFirstPassword,

@@ -21,7 +21,7 @@ class NormalLoginForm extends React.Component {
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item label="用户名">
           {getFieldDecorator('username', {
-            rules: [{ required: true, message: '请输入您的用户名', pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/}],
+            rules: [{ required: true, message: '请输入用户名', pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/}],
           })(
             <Input
             />,
@@ -29,7 +29,7 @@ class NormalLoginForm extends React.Component {
         </Form.Item>
         <Form.Item label="密码">
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: '请输入您的密码', pattern: /^[A-Za-z0-9\u4e00-\u9fa5]{1,25}$/}],
+            rules: [{ required: true, message: '请输入密码', pattern: /^.{1,25}$/}],
           })(
             <Input
               type="password"
