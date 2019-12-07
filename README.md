@@ -2,7 +2,7 @@
 
 ### npm start
 
-Run the app in the development mode.<br>
+Run the web page.<br>
 Open [http://localhost:3000/login](http://localhost:3000/login) to view it in the browser.<br>
 
 
