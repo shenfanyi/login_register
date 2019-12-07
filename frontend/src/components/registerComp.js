@@ -10,6 +10,7 @@ class RegistrationForm extends React.Component {
   state = {
     username: '', 
     password: '',
+    passwordAgain:'',
     confirmDirty: false,
   };
 
@@ -29,7 +30,7 @@ class RegistrationForm extends React.Component {
       alert('密码格式错误，限25个字符')
       return
     }
-    if (this.state.confirmDirty){
+    if (this.state.password !== this.state.passwordAgain){
       alert('二次密码错误')
       return
     }
@@ -62,7 +63,10 @@ class RegistrationForm extends React.Component {
 
   handleConfirmBlur = e => {
     const value = e.target.value;
-    this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+    this.setState({ 
+      confirmDirty: this.state.confirmDirty || !!value,
+      passwordAgain: e.target.value
+    });
   };
 
   compareToFirstPassword = (rule, value, callback) => {
