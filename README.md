@@ -1,5 +1,17 @@
 # login_register
 
-1, npm start
+### npm start
 
-2, url + /login; url + /register
+Run the app in the development mode.<br>
+Open [http://localhost:3000/login](http://localhost:3000/login) to view it in the browser.<br>
+
+
+### npm run build
+
+Build the app for production to the `build` folder.<br>
+
+
+### python manage.py runserver
+
+Run Django backend server.<br>
+Open [http://localhost:8000/login](http://localhost:8000/login) to view it in the browser.<br>
